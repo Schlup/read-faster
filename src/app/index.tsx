@@ -1,30 +1,17 @@
 // GALLERY, where all the PDFs are stored
 
-import { Button } from "@react-navigation/elements";
 import { useRouter } from "expo-router";
 import { Text, View } from "react-native";
+import { Button } from "../../components/ui/button";
 import "../../global.css";
 
 export default function Index() {
   const router = useRouter();
 
   return (
-    <View
-      style={{
-        backgroundColor: "black",
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text className="color-red-900 ">
-        Edit app/index.tsx to edit this screen.
-      </Text>
-      <Button
-        onPress={() => {
-          router.navigate("/configurations");
-        }}
-      >
+    <View className="flex-1 justify-center items-center bg-background">
+      <Text>Edit app/index.tsx to edit this screen.</Text>
+      <Button variant={"default"} onPress={() => router.push("/settings")}>
         Configurações
       </Button>
     </View>
