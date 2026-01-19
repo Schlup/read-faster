@@ -1,60 +1,80 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-    darkMode: ["class"],
-    // NOTE: Update this to include the paths to all files that contain Nativewind classes.
-  content: ["./src/app", "./components/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
   presets: [require("nativewind/preset")],
   theme: {
-  	extend: {
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		},
-  		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
-  			card: {
-  				DEFAULT: 'hsl(var(--card))',
-  				foreground: 'hsl(var(--card-foreground))'
-  			},
-  			popover: {
-  				DEFAULT: 'hsl(var(--popover))',
-  				foreground: 'hsl(var(--popover-foreground))'
-  			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
-  			},
-  			secondary: {
-  				DEFAULT: 'hsl(var(--secondary))',
-  				foreground: 'hsl(var(--secondary-foreground))'
-  			},
-  			muted: {
-  				DEFAULT: 'hsl(var(--muted))',
-  				foreground: 'hsl(var(--muted-foreground))'
-  			},
-  			accent: {
-  				DEFAULT: 'hsl(var(--accent))',
-  				foreground: 'hsl(var(--accent-foreground))'
-  			},
-  			destructive: {
-  				DEFAULT: 'hsl(var(--destructive))',
-  				foreground: 'hsl(var(--destructive-foreground))'
-  			},
-  			border: 'hsl(var(--border))',
-  			input: 'hsl(var(--input))',
-  			ring: 'hsl(var(--ring))',
-  			chart: {
-  				'1': 'hsl(var(--chart-1))',
-  				'2': 'hsl(var(--chart-2))',
-  				'3': 'hsl(var(--chart-3))',
-  				'4': 'hsl(var(--chart-4))',
-  				'5': 'hsl(var(--chart-5))'
-  			}
-  		}
-  	}
+    extend: {
+      borderRadius: {
+        lg: "0.75rem",
+        md: "0.5rem",
+        sm: "0.375rem",
+      },
+      colors: {
+        // Light Theme Colors
+        background: {
+          DEFAULT: "#ffffff",
+          dark: "#0a0a0a",
+        },
+        foreground: {
+          DEFAULT: "#0a0a0a",
+          dark: "#fafafa",
+        },
+        card: {
+          DEFAULT: "#f5f5f5",
+          dark: "#141414",
+          foreground: "#0a0a0a",
+          "foreground-dark": "#fafafa",
+        },
+        popover: {
+          DEFAULT: "#ffffff",
+          dark: "#141414",
+          foreground: "#0a0a0a",
+          "foreground-dark": "#fafafa",
+        },
+        primary: {
+          DEFAULT: "#171717",
+          dark: "#fafafa",
+          foreground: "#fafafa",
+          "foreground-dark": "#171717",
+        },
+        secondary: {
+          DEFAULT: "#f5f5f5",
+          dark: "#262626",
+          foreground: "#171717",
+          "foreground-dark": "#fafafa",
+        },
+        muted: {
+          DEFAULT: "#f5f5f5",
+          dark: "#262626",
+          foreground: "#737373",
+          "foreground-dark": "#a3a3a3",
+        },
+        accent: {
+          DEFAULT: "#f5f5f5",
+          dark: "#333333",
+          foreground: "#171717",
+          "foreground-dark": "#fafafa",
+        },
+        destructive: {
+          DEFAULT: "#ef4444",
+          foreground: "#fafafa",
+        },
+        border: {
+          DEFAULT: "#e5e5e5",
+          dark: "#2e2e2e",
+        },
+        input: {
+          DEFAULT: "#e5e5e5",
+          dark: "#2e2e2e",
+        },
+        ring: {
+          DEFAULT: "#a3a3a3",
+          dark: "#595959",
+        },
+      },
+    },
   },
   plugins: [require("tailwindcss-animate")],
 };
